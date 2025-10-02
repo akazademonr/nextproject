@@ -562,9 +562,9 @@
     }
 
     .social__logo {
-        background-color: white;
+        color: white;
         justify-self: flex-start;
-        margin-left: 20px;
+        margin-left: 16px;
         cursor: pointer;
         text-decoration: none;
         font-size: 2rem;
@@ -573,5 +573,14 @@
         margin-bottom: 16px;
     }
 
+    .website__right {
+        color: white;
+        justify-content: space-between;
+        margin-left: 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
 
 
