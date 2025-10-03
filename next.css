@@ -410,6 +410,7 @@
         background-size: cover;
         position: relative;
         color: white;
+        will-change: transform;
     }
 
     .services__card:nth-child(2) {
@@ -445,7 +446,8 @@
         cursor: pointer;
     }
 
-    .services__card:hover {
+    .services__card:hover, 
+    .services__card:active{
         transform: scale(1.075);
         transition: 0.2s ease-in;
         cursor: pointer;
@@ -460,6 +462,7 @@
             font-size: 2rem;
             margin-top: 12rem; 
         }
+        
     }
 
     @media screen and (max-width: 480px) {
@@ -535,52 +538,68 @@
         transition: 0.3s ease-out;
     }
 
-    /* Social Icon*/
-        .social__media {
-        max-width: 1000px;
-        width: 100px;
+    .copyright_container {
+        margin-top: 50px;
+        text-align: center;
         color: white;
-    }
-
-    .social__media--wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 90%;
-        max-width: 1000px;
-        margin: 40px auto 0 auto;
-        color: white;
+        margin-bottom: 0;
     }
 
     .social__icons {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 240px;
-        color: white;
-        font-size: 24px;
+        text-align: center;
+        padding: 0;
+        transition-property: transfrom;
+        transition-duration: 0.5s;
     }
 
-    .social__logo {
-        color: white;
-        justify-self: flex-start;
-        margin-left: 16px;
+    .social__icons a {
+        display: inline-flex;
+        text-align: center;
+        padding: 25px;
+        margin-top: 50px;
+    }
+
+    .social__icons ion-icon {
+        color: black;
+        font-size: 30px;
+        margin: 0 20px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
         cursor: pointer;
-        text-decoration: none;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
-    }
-
-    .website__right {
+        height: 50px;
+        width: 50px;
         color: white;
-        justify-content: space-between;
-        margin-left: 16px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
+    }
+
+    .social__icons:hover {
+        transform: scale(1.3);
+        transition: 2s;
     }
 
 
+    @media screen and (max-width: 820px) {
+        .footer__links {
+            padding-top: 2rem;
+        }
+
+        .copyright_container {
+            margin-bottom: 2rem;
+        }
+
+        .footer__link--wrapper {
+            flex-direction: column;
+        }
+
+        .social__icons {
+            flex-direction: column;
+        }
+    }
+
+     @media screen and (max-width: 480px) {
+        .footer__link--items {
+            margin: 0;
+            padding: 10px;
+            width: 100%;
+        }
+     }
